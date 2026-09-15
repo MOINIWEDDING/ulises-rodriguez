@@ -129,16 +129,6 @@
   }
   .hero-photo img{
     width:100%; height:auto;
-    filter:drop-shadow(0 40px 60px rgba(0,0,0,.35));
-  }
-  .hero-photo::before{
-    content:"";
-    position:absolute; left:50%; bottom:2%;
-    width:78%; height:10%;
-    transform:translateX(-50%);
-    background:radial-gradient(closest-side, rgba(0,0,0,.35), transparent 75%);
-    filter:blur(6px);
-    z-index:-1;
   }
 
   @keyframes riseIn{ to{opacity:1; transform:translateY(0);} }
@@ -278,8 +268,8 @@
     display:flex; align-items:center; justify-content:center; flex:none;
   }
   .contact-btn .icon svg{width:20px; height:20px;}
-  .contact-btn .txt{display:flex; flex-direction:column; gap:2px;}
-  .contact-btn .txt b{font-size:15.5px; font-weight:600;}
+  .contact-btn .txt{display:flex; flex-direction:column; gap:2px; min-width:0;}
+  .contact-btn .txt b{font-size:15.5px; font-weight:600; overflow-wrap:anywhere; word-break:break-word;}
   .contact-btn .txt span{font-size:13px; color:var(--ink-soft);}
 
   .contact-card{
